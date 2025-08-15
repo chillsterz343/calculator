@@ -8,13 +8,14 @@
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
-  align-items: center;
+  align-items: end;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
   font-family: var(--font-geist-sans);
   position: relative;
+  background-color: #0A0A0A;
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 .main {
@@ -23,13 +24,11 @@
   align-items: center;
   gap: 6px;
   grid-row-start: 2;
-  position: absolute;
-  bottom: 25px;
+  max-height: 100%;
 }
 
 .paper {
-  /* min-height: 10px; */
-  max-height: 40vh;
+  max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,14 +36,18 @@
   color: black;
   width: 75%;
   height: auto;
-  border-radius: 5;
+  border-radius: 5px;
   overflow-y: auto;
+  transform: translateY(15px);
+  transition: transform 0.3s;
 }
 
 .calculator {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 20px 15px 20px 15px;
+  border-radius: 15%;
 }
 
 .row {
@@ -178,10 +181,10 @@
   height: 100px;
   width: 400px;
   background-color: #2f2f2f;
-  border-top-left-radius: 10;
-  border-top-right-radius: 10;
-  border-bottom-left-radius: 50;
-  border-bottom-right-radius: 50;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .displayInner {
